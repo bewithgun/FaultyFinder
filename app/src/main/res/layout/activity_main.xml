@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bgapp"
+    android:fitsSystemWindows="false"
+    >
+
+    <ImageView
+
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:layout_marginTop="90dp"
+        android:src="@drawable/flogo" />
+
+    <TextView
+        android:id="@+id/question"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/logo"
+        android:layout_marginTop="30dp"
+        android:fontFamily="sans-serif-black"
+        android:layout_marginLeft="20dp"
+        android:text="WHO IS FAULTY ?"
+        android:textColor="#3cb371"
+        android:textSize="20dp" />
+    <EditText
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif-light"
+        android:singleLine="true"
+
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="0dp"
+        android:padding="10dp"
+        android:hint="ENTER NAME HERE"
+        android:id="@+id/ed_name_here"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rectangle"
+        android:layout_below="@id/question"
+        android:textSize="20sp"
+
+
+    />
+
+    <Button
+        android:textColor="@android:color/white"
+        android:layout_margin="25dp"
+        android:textSize="50dp"
+        android:textStyle="italic"
+        android:fontFamily="sans-serif-light"
+        android:layout_marginTop="20dp"
+        android:id="@+id/buttoncheck"
+        android:text="CHECK"
+        android:background="@drawable/rec_blue"
+        android:layout_below="@+id/ed_name_here"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+
+
+
+
+</RelativeLayout>

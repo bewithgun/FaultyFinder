@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bgapp"
+    >
+    <ImageView
+
+        android:layout_marginTop="80dp"
+        android:id="@+id/logo"
+        android:src="@drawable/flogo"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        />
+    <TextView
+        android:layout_marginTop="30dp"
+        android:id="@+id/question"
+        android:gravity="center"
+        android:layout_below="@+id/logo"
+        android:textColor="#f0eb41"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30dp"
+        android:fontFamily="sans-serif-black"
+        android:text="WHO IS FAULTY ?"
+        />
+    <EditText
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        android:fontFamily="cursive"
+        android:singleLine="true"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        android:hint="ENTER NAME HERE"
+        android:id="@+id/ed_name_here"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rectangle"
+        android:layout_below="@id/question"
+        android:textSize="20sp"
+        />
+    <Button
+        android:textColor="@android:color/white"
+        android:layout_margin="25dp"
+        android:textSize="50dp"
+        android:textStyle="italic"
+        android:fontFamily="sans-serif-light"
+        android:layout_marginTop="20dp"
+        android:id="@+id/buttoncheck"
+        android:text="CHECK"
+        android:background="@drawable/rec_blue"
+        android:layout_below="@+id/ed_name_here"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <TextView
+
+        android:textColor="@android:color/white"
+        android:visibility="invisible"
+        android:paddingLeft="41dp"
+        android:id="@+id/Right"
+        android:layout_below="@+id/buttoncheck"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rec__yellow"
+
+
+        android:layout_marginLeft="35dp"
+        android:layout_marginRight="35dp"
+
+        android:text="YOU ARE RIGHT"
+        android:textSize="30dp"/>
+    <TextView
+
+        android:textColor="@android:color/white"
+        android:visibility="invisible"
+        android:paddingLeft="41dp"
+        android:id="@+id/Wrong"
+        android:layout_below="@+id/buttoncheck"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rec_red"
+        android:text="YOU ARE WRONG"
+
+        android:layout_marginLeft="35dp"
+        android:layout_marginRight="35dp"
+
+
+        android:textSize="30dp"/>
+    <Button
+        android:layout_marginBottom="80dp"
+        android:id="@+id/clear"
+        android:background="@drawable/rec__lightyellow"
+        android:text="CLEAR"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        />
+
+
+</RelativeLayout>
