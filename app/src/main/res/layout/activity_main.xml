@@ -6,7 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bgapp"
-    android:fitsSystemWindows="false"
+
+    android:fitsSystemWindows="true"
     >
 
     <ImageView
@@ -45,6 +46,7 @@
         android:background="@drawable/rectangle"
         android:layout_below="@id/question"
         android:textSize="20sp"
+        android:windowSoftInputMode="stateAlwaysVisible"
 
 
     />
