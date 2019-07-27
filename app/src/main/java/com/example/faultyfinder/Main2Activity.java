@@ -7,43 +7,71 @@ import android.media.Image;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import static android.content.Intent.FLAG_ACTIVITY_REORDER_TO_FRONT;
 
 public class Main2Activity extends AppCompatActivity {
 ImageView sticker;
 TextView result;
 TextView nameentered;
-Button back;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
+        setTitle("Animation2");
         setContentView(R.layout.activity_main2);
         sticker = (ImageView) findViewById(R.id.sticker_result);
         result = (TextView) findViewById(R.id.result);
         nameentered = (TextView) findViewById(R.id.name_entered);
-        back = (Button) findViewById(R.id.back_button);
-        back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent act1 = new Intent(getBaseContext(),MainActivity.class);
 
-                startActivity(act1);
-            }
-        });
         Bundle bundle = getIntent().getExtras();
         String names2 = bundle.getString("nameac1");
         finder(names2);
 
     }
 
+    @Override
+    public void onBackPressed() {
+        Animation aniFade= AnimationUtils.loadAnimation(getApplicationContext(),R.anim.fadeout);
+        sticker.startAnimation(aniFade);
+        result.startAnimation(aniFade);
+        nameentered.startAnimation(aniFade);
+        Intent prev = new Intent(this, MainActivity.class);
+        overridePendingTransition(R.anim.fadeout,R.anim.fadeout);
+        finish();
+        startActivity(prev);
+    }
+
     void finder(String names) {
+        String nametodisplay;
         names = names.toLowerCase();
         names = names.replaceAll("\\s", "");
-        nameentered.setText(names);
+        nametodisplay=names;
+        nametodisplay = nametodisplay.substring(0,1).toUpperCase()+ names.substring(1).toLowerCase();
+        nameentered.setText(nametodisplay);
         switch (names) {
+            case "aditya":
+                result.setText("Helping always,BUT NOT FAULTY");
+                sticker.setImageResource(R.drawable.aditya);
+                break;
+            case "yash":
+                result.setText("CR,NOT FAULTY");
+                sticker.setImageResource(R.drawable.yash);
+                break;
+            case "sukum":
+                result.setText("Gammer and youtuber,NOT FAULTY");
+                sticker.setImageResource(R.drawable.sukum);
+                break;
+            case "mayuresh":
+                result.setText("Gamer,NOT FAULTY");
+                sticker.setImageResource(R.drawable.mayuresh);
+                break;
             case "sanket":
                 result.setText("TOPPER BOY,NOT FAULTY");
                 sticker.setImageResource(R.drawable.sanket);
